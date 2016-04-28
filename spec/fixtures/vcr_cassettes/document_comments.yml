@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.notablepdf.com/embed/documents/797003eeefa82bd465e9b806a592b005/comments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token ABC-vRXxiGb7Nty9mXYZ
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Apr 2016 03:24:29 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"5eca093834101597b450b36b63a3ca3b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aaf56624-f145-4883-be0f-9ed998618e5d
+      X-Runtime:
+      - '0.030352'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur, 1.1 1609ff46f48ba7f9b85fb79b1301540c.cloudfront.net (CloudFront)
+      Vary:
+      - Origin
+      X-Cache:
+      - Miss from cloudfront
+      X-Amz-Cf-Id:
+      - 2KCgV-bTRKvbXxbQui42QNtF3LWwnZ87_ZoNHZiKAThDz11YAuoDfQ==
+    body:
+      encoding: UTF-8
+      string: '{"comments":[]}'
+    http_version: 
+  recorded_at: Thu, 28 Apr 2016 03:24:29 GMT
+recorded_with: VCR 2.9.3

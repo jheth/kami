@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.notablepdf.com/embed/sessions
+    body:
+      encoding: UTF-8
+      string: '{"document_identifier":"797003eeefa82bd465e9b806a592b005","user":{"name":"Test
+        User","user_id":1},"expires_at":"2016-04-28 00:22:09 -0400"}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token ABC-vRXxiGb7Nty9mXYZ
+      Content-Length:
+      - '139'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Apr 2016 03:22:10 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"79655b94fa7a4d6829e3b9533069b37a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      X-Request-Id:
+      - ee5d2c6c-a917-4ae6-8e50-03d5c3ac288b
+      X-Runtime:
+      - '0.110756'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur, 1.1 f0771538ae1817666f9a605394497dfa.cloudfront.net (CloudFront)
+      X-Cache:
+      - Miss from cloudfront
+      X-Amz-Cf-Id:
+      - w0hlPlNrEuUhu7QZyUq7RmViszbl-6sps9Ef1jogP-HdnS3gwmjqdg==
+    body:
+      encoding: UTF-8
+      string: '{"view_session_key":"ANgoQRGNgj-YF8rdfoTk","viewer_url":"https://embed.kamihq.com/web/viewer.html?source=embed_api\u0026document_identifier=797003eeefa82bd465e9b806a592b005\u0026user=%7B%22id%22%3A1428120%2C%22name%22%3A%22Test%20User%22%2C%22md5_email%22%3Anull%2C%22email%22%3Anull%2C%22time_zone%22%3Anull%2C%22referrer%22%3Anull%2C%22created_at%22%3A%222016-04-28T03%3A22%3A10.587Z%22%2C%22updated_at%22%3A%222016-04-28T03%3A22%3A10.587Z%22%2C%22authentication_token%22%3A%22ANgoQRGNgj-YF8rdfoTk%22%2C%22document_token%22%3A%22iSGiLzrbxbT4u8GYVrYX%22%2C%22properties%22%3A%7B%7D%2C%22premium_subscription_active%22%3Atrue%2C%22channel%22%3A%22user-5edf1584b0e543bee040947d374c250d67b59e1c%22%2C%22client_feature_flags%22%3A%5B%22released_feature%22%2C%22autograph%22%2C%22drawing%22%2C%22google_sync%22%5D%2C%22newsletter%22%3Afalse%2C%22guest_user%22%3Afalse%2C%22domain_properties%22%3A%7B%7D%2C%22news_version%22%3A%222%22%2C%22customer%22%3Anull%2C%22licenses%22%3A%5B%7B%22id%22%3A376346%2C%22tag%22%3A%22%22%2C%22valid_from%22%3Anull%2C%22valid_to%22%3Anull%2C%22active%22%3Atrue%2C%22license_type%22%3A%22work%22%2C%22expiry%22%3Anull%2C%22status%22%3A%22paid%22%7D%5D%2C%22current_license%22%3A%7B%22id%22%3A376346%2C%22tag%22%3A%22%22%2C%22valid_from%22%3Anull%2C%22valid_to%22%3Anull%2C%22active%22%3Atrue%2C%22license_type%22%3A%22work%22%2C%22expiry%22%3Anull%2C%22status%22%3A%22paid%22%7D%7D\u0026viewer_options=null","session_expiry":"2016-04-28T04:22:09.000Z"}'
+    http_version: 
+  recorded_at: Thu, 28 Apr 2016 03:22:10 GMT
+recorded_with: VCR 2.9.3

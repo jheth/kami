@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.notablepdf.com/embed/exports
+    body:
+      encoding: UTF-8
+      string: '{"document_identifier":"797003eeefa82bd465e9b806a592b005","export_type":"inline"}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token ABC-vRXxiGb7Nty9mXYZ
+      Content-Length:
+      - '81'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Apr 2016 16:58:55 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"e821e7da3183ba91830531574bd9b757"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      X-Request-Id:
+      - cc185844-1eb2-47e5-870f-8b68bee6cc96
+      X-Runtime:
+      - '0.043783'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur, 1.1 7def126dbac7c726cc507416f5c13aba.cloudfront.net (CloudFront)
+      X-Cache:
+      - Miss from cloudfront
+      X-Amz-Cf-Id:
+      - T0-qFoGehFx520a9T-QwnyY88Xo2Lj3I9O9r2QW1CunbARA3XhV9ZQ==
+    body:
+      encoding: UTF-8
+      string: '{"id":"6cb4de71-c3d5-40c2-8b88-4774ea92db9a","status":"pending","file_url":null,"error_type":null,"user_message":null,"export_id":"6cb4de71-c3d5-40c2-8b88-4774ea92db9a","destination_document_identifier":null,"error_data":null,"google_user_id":null,"google_file_upload_id":null}'
+    http_version: 
+  recorded_at: Thu, 28 Apr 2016 16:58:54 GMT
+recorded_with: VCR 2.9.3

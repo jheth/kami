@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.notablepdf.com/embed/documents/797003eeefa82bd465e9b806a592b005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token ABC-vRXxiGb7Nty9mXYZ
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Apr 2016 17:30:55 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Request-Id:
+      - 5835be45-c26c-4245-be93-7d07235aa38e
+      X-Runtime:
+      - '0.382085'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur, 1.1 c58f6a2285e871d13e8d6606ca403950.cloudfront.net (CloudFront)
+      X-Cache:
+      - Miss from cloudfront
+      X-Amz-Cf-Id:
+      - 34TArs4KtmB-8vUPCGsu9DlJEgLP54AO2r5DhwVj3J5whhFxoUyWyw==
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 28 Apr 2016 17:30:54 GMT
+recorded_with: VCR 2.9.3

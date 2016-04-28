@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.notablepdf.com/embed/documents/1234
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token ABC-vRXxiGb7Nty9mXYZ
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Apr 2016 22:12:02 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 9cbbeaa5-40d9-4d22-94cf-edfe59606a08
+      X-Runtime:
+      - '0.011324'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur, 1.1 23d9ec3f8fb28a90c0ccf2aa9a2b3385.cloudfront.net (CloudFront)
+      Vary:
+      - Origin
+      X-Cache:
+      - Error from cloudfront
+      X-Amz-Cf-Id:
+      - IAnAd6G3fwddMSKCuqA81GN8Bj7kk6BWqMj2yxFNpwI3yArC-egW6g==
+    body:
+      encoding: UTF-8
+      string: '{"errors":["Record Not Found"]}'
+    http_version: 
+  recorded_at: Wed, 27 Apr 2016 22:12:02 GMT
+recorded_with: VCR 2.9.3

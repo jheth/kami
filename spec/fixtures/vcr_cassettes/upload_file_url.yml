@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.notablepdf.com/embed/documents
+    body:
+      encoding: UTF-8
+      string: '{"name":"example.pdf","document_url":"https://dl.dropboxusercontent.com/u/11644126/example.pdf"}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token ABC-vRXxiGb7Nty9mXYZ
+      Content-Length:
+      - '96'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Apr 2016 22:32:32 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"4c44787552cf18b01bc9465b07e48c53"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      X-Request-Id:
+      - aaf2b1b6-cceb-4577-9b2c-6dcb090e1589
+      X-Runtime:
+      - '0.029983'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur, 1.1 8838127b494506bdb46c26313c3607ed.cloudfront.net (CloudFront)
+      X-Cache:
+      - Miss from cloudfront
+      X-Amz-Cf-Id:
+      - obaTnKNfWxDAPHpNf41VLJ7NeIIlo0jmlb-n-Dymq9V6CcrWD4E2Tw==
+    body:
+      encoding: UTF-8
+      string: '{"name":"example.pdf","document_identifier":"797003eeefa82bd465e9b806a592b005","file_status":"processing","file_error_message":null,"created_at":"2016-04-27T22:32:32.098Z"}'
+    http_version: 
+  recorded_at: Wed, 27 Apr 2016 22:32:31 GMT
+recorded_with: VCR 2.9.3
