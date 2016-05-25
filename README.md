@@ -1,5 +1,9 @@
 # Kami
 
+[![Build Status](https://travis-ci.org/jheth/kami.svg)](https://travis-ci.org/jheth/kami)
+[![Code Climate](https://codeclimate.com/github/jheth/kami/badges/gpa.svg)](https://codeclimate.com/github/jheth/kami)
+
+
 Formerly NotablePDF, [Kami](https://www.kamihq.com/) provides Beautiful Document Viewer and Annotation Software.
 
 API Overview: https://www.kamihq.com/api/
