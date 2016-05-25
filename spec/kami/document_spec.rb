@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Kami::Document do
   let(:client) { Kami::Client.new('ABC-vRXxiGb7Nty9mXYZ') }
-  let(:subject) { Kami::Document.new(client, '797003eeefa82bd465e9b806a592b005') }
+  let(:subject) { Kami::Document.new(client: client, id: '797003eeefa82bd465e9b806a592b005') }
 
   describe '#status' do
     it 'returns status hash' do
@@ -23,7 +23,7 @@ describe Kami::Document do
   describe '#delete' do
     it 'removes document' do
       VCR.use_cassette('document_delete') do
-        expect(subject.delete).to eq('')
+        expect(subject.delete).to eq true
       end
     end
   end

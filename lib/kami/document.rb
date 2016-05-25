@@ -1,19 +1,33 @@
 module Kami
   class Document
-    attr_reader :document_id, :session_view
+    attr_reader :name, :document_identifier, :file_status, :file_error_message,
+                :created_at, :session_view
 
-    def initialize(client, document_id)
+    def initialize(client: nil, id: nil, data: nil)
       @client = client
-      @document_id = document_id
+      @document_identifier = id
+      @raw_data = data
+
+      if data.is_a?(Hash)
+        @name = data['name']
+        @document_identifier = data['document_identifier']
+        @file_status = data['file_status']
+        @file_error_message = data['file_error_message']
+        @created_at = data['created_at']
+      end
+    end
+
+    def to_hash
+      @raw_data || status
     end
 
     def status
-      @status ||= @client.get("documents/#{@document_id}")
+      @status ||= @client.get("documents/#{@document_identifier}")
     end
 
     def create_export(type: 'annotation')
       payload = {
-        document_identifier: @document_id,
+        document_identifier: @document_identifier,
         export_type: type
       }
       @export = @client.post('exports', payload)
@@ -27,18 +41,19 @@ module Kami
     end
 
     def delete
-      @client.delete("documents/#{@document_id}")
+      @client.delete("documents/#{@document_identifier}")
+      true
     end
 
     def comments
-      @client.get("documents/#{@document_id}/comments")
+      @client.get("documents/#{@document_identifier}/comments")
     end
 
     def session_view(name: 'Guest', user_id: 0)
-      return unless @document_id
+      return unless @document_identifier
 
       payload = {
-        document_identifier: @document_id,
+        document_identifier: @document_identifier,
         user: {
           name: name,
           user_id: user_id

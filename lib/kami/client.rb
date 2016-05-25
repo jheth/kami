@@ -8,11 +8,13 @@ module Kami
 
     def documents
       response = get('documents')
-      response['documents']
+      response['documents'].map do |hash|
+        Kami::Document.new(client: self, data: hash)
+      end
     end
 
     def document(id)
-      Kami::Document.new(self, id)
+      Kami::Document.new(client: self, id: id)
     end
 
     def upload(name: nil, document_url: nil, file: nil)
@@ -32,6 +34,7 @@ module Kami
 
     def delete_document(document_id)
       delete("documents/#{document_id}")
+      true
     end
 
     def get(path)

@@ -12,16 +12,26 @@ describe Kami::Client do
 
     it 'returns list of document uploads' do
       VCR.use_cassette('document_list') do
-        expected = [
-          {
-            'name' => 'example.pdf',
-            'document_identifier' => '797003eeefa82bd465e9b806a592b005',
-            'file_status' => 'done',
-            'file_error_message' => nil,
-            'created_at' => '2016-04-27T22:32:32.098Z'
-          }
-        ]
-        expect(subject.documents).to eq(expected)
+        doc_hash = {
+          'name' => 'example.pdf',
+          'document_identifier' => '797003eeefa82bd465e9b806a592b005',
+          'file_status' => 'done',
+          'file_error_message' => nil,
+          'created_at' => '2016-04-27T22:32:32.098Z'
+        }
+
+        list = subject.documents
+        expect(list.size).to eq(1)
+
+        doc = list.first
+        expect(doc).to be_instance_of(Kami::Document)
+        expect(doc.to_hash).to eq(doc_hash)
+
+        expect(doc.name).to eq doc_hash['name']
+        expect(doc.document_identifier).to eq doc_hash['document_identifier']
+        expect(doc.file_status).to eq doc_hash['file_status']
+        expect(doc.file_error_message).to eq doc_hash['file_error_message']
+        expect(doc.created_at).to eq doc_hash['created_at']
       end
     end
   end
@@ -81,7 +91,7 @@ describe Kami::Client do
     it 'removes document' do
       VCR.use_cassette('document_delete') do
         response = subject.delete_document('797003eeefa82bd465e9b806a592b005')
-        expect(response).to eq('')
+        expect(response).to eq true
       end
     end
   end
