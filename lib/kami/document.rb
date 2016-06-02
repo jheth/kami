@@ -49,8 +49,10 @@ module Kami
       @client.get("documents/#{@document_identifier}/comments")
     end
 
-    def session_view(name: 'Guest', user_id: 0)
+    def session_view(name: 'Guest', user_id: 0, expires_at: nil, theme: 'light', show_sync: true, show_save: true)
       return unless @document_identifier
+
+      expires_at = (Time.now + (60 * 60)) if expires_at.nil?
 
       payload = {
         document_identifier: @document_identifier,
@@ -58,14 +60,19 @@ module Kami
           name: name,
           user_id: user_id
         },
-        expires_at: (Time.now + (60 * 60))
+        expires_at: expires_at,
+        viewer_options: {
+          theme: theme,
+          show_sync: show_sync,
+          show_save: show_save
+        }
       }
 
       @session_view = @client.post('sessions', payload)
     end
 
-    def session_view_url(name: 'Guest', user_id: 0)
-      view = session_view(name: name, user_id: user_id)
+    def session_view_url(name: 'Guest', user_id: 0, expires_at: nil, theme: 'light', show_sync: true, show_save: true)
+      view = session_view(name: name, user_id: user_id, expires_at: expires_at, theme: theme, show_sync: show_sync, show_save: show_save)
       view['viewer_url']
     end
   end
