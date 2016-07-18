@@ -19,14 +19,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "rest-client", "~> 1.8.0"
+  spec.add_runtime_dependency "rest-client", ">= 1.8.0", "< 1.9.0"
 
-  spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "simplecov", "~> 0.11.2"
-  spec.add_development_dependency "webmock", "~> 2.0.0"
-  spec.add_development_dependency "vcr", "~> 2.9.3"
-  spec.add_development_dependency "pry-byebug", "~> 3.3.0"
-  spec.add_development_dependency "awesome_print", "~> 1.6.1"
+  spec.add_development_dependency "bundler", ">= 1.11", "< 2.0"
+  spec.add_development_dependency "rake", ">= 10.0", "< 12.0"
+  spec.add_development_dependency "rspec", ">= 3.0", "< 4.0"
+  spec.add_development_dependency "simplecov", ">= 0.11", "< 1.0"
+  spec.add_development_dependency "webmock", ">= 2.0.0", "< 3.0"
+  spec.add_development_dependency "vcr", ">= 2.9.3", "< 4.0"
+  spec.add_development_dependency "pry-byebug", ">= 3.3.0", "< 4.0"
+  spec.add_development_dependency "awesome_print", ">= 1.6.1", "< 2.0"
 end
