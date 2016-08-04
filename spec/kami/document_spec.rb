@@ -69,6 +69,28 @@ describe Kami::Document do
     end
   end
 
+  describe '#download' do
+    it 'create and export requested documents' do
+      hash = {
+        'destination_document_identifier' => nil,
+        'error_data' => nil,
+        'error_type' => nil,
+        'export_id' => '821f94ba-4dc5-4423-8589-348588601c2a',
+        'file_url' => 'https://notabletemporarydownloads.s3.amazonaws.com/Kami%20Export%20-%20_T7I7JqrLfroMIMt5_ox0A.pdf',
+        'google_file_upload_id' => nil,
+        'google_user_id' => nil,
+        'id' => '821f94ba-4dc5-4423-8589-348588601c2a',
+        'output_documents' => nil,
+        'status' => 'done',
+        'user_message' => nil
+      }
+
+      VCR.use_cassette('document_download') do
+        expect(subject.download).to eq(hash)
+      end
+    end
+  end
+
   describe '#comments' do
     it 'return array of comments' do
       VCR.use_cassette('document_comments') do

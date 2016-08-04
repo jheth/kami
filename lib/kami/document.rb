@@ -40,6 +40,18 @@ module Kami
       @client.get("exports/#{export_id}")
     end
 
+    def download(type: 'annotation', attempts: 5)
+      export = create_export(type: type)
+
+      attempts.times do
+        break if export['status'] != 'pending'
+        sleep(1)
+        export = export_file(export['id'])
+      end
+
+      export
+    end
+
     def delete
       @client.delete("documents/#{@document_identifier}")
       true
