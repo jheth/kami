@@ -16,7 +16,7 @@ API Documentation: http://docs.kamiembeddingapi.apiary.io/
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'kami', github: 'jheth/kami'
+gem 'kami'
 ```
 
 And then execute:
