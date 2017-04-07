@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `Kami::Document` now has a `download` method
 - This CHANGELOG :)
 
+### Changed
+
+- Loosen up gemspec version requirements to allow for `rest-client` 2.x
+
 ## 1.0.0
 
 Initial Release.
